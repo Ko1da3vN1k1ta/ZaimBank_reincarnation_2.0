@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="448.0" prefWidth="562.0" spacing="10" style="-fx-background-color: #B0B7C6;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.StatisticalFinanceConroller">
+    <padding>
+
+    </padding>
+    <Label text="Статистика доходов и расходов" />
+    <BarChart fx:id="barChart" prefHeight="218.0" prefWidth="562.0">
+        <xAxis>
+            <CategoryAxis />
+        </xAxis>
+        <yAxis>
+            <NumberAxis />
+        </yAxis>
+    </BarChart>
+    <HBox alignment="CENTER" spacing="5">
+        <TextField fx:id="itemName" promptText="Имя" />
+        <Button onAction="#addItemButtonAction" text="Добавить доход" />
+        <Button onAction="#addExpenseButtonAction" text="Добавить расход" />
+    </HBox>
+     <TextField fx:id="itemAmount" prefHeight="0.0" prefWidth="562.0" promptText="Сумма">
+      <VBox.margin>
+         <Insets bottom="10.0" left="200.0" right="200.0" top="10.0" />
+      </VBox.margin>
+   </TextField>
+    <Button onAction="#updateButtonAction" text="Обновить" />
+    <Button onAction="#removeItemButtonAction" text="Удалить" />
+</VBox>
